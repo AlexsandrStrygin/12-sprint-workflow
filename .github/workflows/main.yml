@@ -38,7 +38,7 @@ jobs:
         with:
           images: AlexsandrStrygin/12-sprint-workflow:v1
 
-      - name: Build and push Docker Inage
+      - name: Build and push Docker Image
         uses: docker/build-push-action@v5
         with:
           context: .
