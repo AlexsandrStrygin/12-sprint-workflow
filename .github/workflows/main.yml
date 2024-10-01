@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: AlexsandrStrygin/12-sprint-workflow
+          images: AlexsandrStrygin/12-sprint-workflow:v1
 
       - name: Build and push Docker Inage
         uses: docker/build-push-action@v5
