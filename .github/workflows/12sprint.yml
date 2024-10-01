@@ -24,11 +24,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and tag image
         run: |
-          docker build -t my-docker-image .
-          docker tag my-docker-image ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
+          docker build -t 12-sprint-workflow .
+          docker tag 12-sprint-workflow ${{ secrets.DOCKER_USERNAME }}/12-sprint-workflow:v1
       - name: Push image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-docker-image:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/12-sprint-workflow:v1
       - name: Debug Docker login credentials
         run: |
           echo "DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}"
