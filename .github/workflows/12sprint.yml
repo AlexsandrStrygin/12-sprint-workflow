@@ -12,14 +12,14 @@ jobs:
         run: |
           go vet ./...
 
-  deploy:
+ deploy:
   runs-on: ubuntu-latest
   needs: test
   if: github.event_name == 'push' && github.ref_type == 'tag'
   steps:
-    -
-      name: Debug event name
+    - name: Debug event name
       run: echo "Event name: $GITHUB_EVENT_NAME"
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
