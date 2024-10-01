@@ -17,10 +17,9 @@ jobs:
   needs: test
   if: github.event_name == 'push' && github.ref_type == 'tag'
   steps:
-    - name: Debug event name
+    -
+      name: Debug event name
       run: echo "Event name: $GITHUB_EVENT_NAME"
-    ...
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
